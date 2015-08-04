@@ -1,0 +1,46 @@
+DOM（document object model） BOM（browser object model）
+
+javascript是解释型语言，而不像编译型语言（需要编译成为计算机能够理解的机器码），javascript指令以普通文本形式传递给浏览器
+依次解释执行
+
+每次浏览器要加载和显示页面时，需要解释HTML源代码。解析的过程中，浏览器要建立一个内部模型（DOM）来代表文档里的内容
+
+我们用javascript访问和编辑DOM模型的各个部分，从而改变页面的显示内容和用户交互的方式
+
+早期，javascript只能对web页面的某些部分进行最基本的访问（0级DOM，也可以被称为BOM）
+
+DOM不仅能用于web页面和javascript，还能用于其他编程语言和XML，具体要去了解各种级别的DOM的详细内容
+
+浏览器在每次加载和显示页面时，都在内存里创建页面及其全部元素的一个内部表示体系，也就是DOM。
+
+全部元素具有一个逻辑化、层次化的结构，一个由父对象和子对象组成的树形结构，这个树形结构最顶端的就是浏览器window对象，
+
+window.alert()和window.write()，<script>alert("here is my message");</script>弹出的对话框，在用户点击确定按钮之前是不能
+进行其他操作的（模态对话框），可以不明确书写window对象的名称，因为他是DOM层级的顶（全局对象）
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>hello the first javascript</title>
+</head>
+<body>
+<script>
+alert("hello javascript world!");  //the default object is window
+</script>
+</body>
+</html>
+
+读取document对象的属性：
+<!DOCTYPE html>
+<html>
+<head>
+<title>hello the first javascript</title>
+</head>
+<body>
+<script>
+alert(document.title);  //there is no "" here
+alert(document.lastModified);  //show the time last modify, care the M is not m
+</script>
+</body>
+</html>
+
