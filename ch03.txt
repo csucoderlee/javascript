@@ -1,0 +1,15 @@
+章节内容：
+1.定义函数（创建函数）
+2.调用函数
+3.函数如何接收数据（传递参数）
+4.从函数返回值
+5.变量的作用域
+
+//定义函数，function必须小写，否则报错
+function sayHello(){
+  alert(" hello !");
+}
+
+//调用函数
+<input type="button" onclick="sayHello()" />  //注意onclick事件和sayHello()函数的大小写情况
+
