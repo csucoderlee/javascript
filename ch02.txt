@@ -1,0 +1,22 @@
+首先是HTML页面里添加JavaScript代码的不同方式
+接着是在JavaScript里声明变量，给变量赋值以及利用算数操作符操作变量
+最后是JavaScript的一些事件处理器，展示如何检验用户鼠标的特定行为
+
+两种方式添加JavaScript代码：内部添加<script></script>，外部添加<script src="myjavascript.js"></script>()外部文件里不能使用
+<script></script>标签，也不能使用任何HTML标签，只能是纯粹的javascript代码
+
+javascript是区分大小写的·
+
+javascript使用“事件处理器”来处理事件，事件处理器几乎可以用于页面上任何可见的HTML元素，使用的方式之一就是给HTML添加属性
+
+onClick、onMouseOver、onMouseOut
+<!DOCTYPE html>
+<html>
+<head>
+<title>onClick Demo</title>
+</head>
+<body>
+<input type="button" onclick="alert("you click the buttob")" value="click me">   //html不区分大小写，所以c is not C
+<img src="image1.png" alt="image1" onmouseover="this.src='image2.png';" onmouseout="this.src='image1.png';" />
+</body>
+</html>
