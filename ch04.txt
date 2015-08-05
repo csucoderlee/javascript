@@ -1,0 +1,23 @@
+本章主要内容：js对象和常见DOM对象
+js对象有：Date和Math对象
+DOM对象有window、document、navgator、history、location
+这里吐槽一下：有的书上DOM对象和js对象傻傻分不清楚，DOM对象指的是那些对文档操作，BOM对象指的是对浏览器操作，而javascript只是一种
+脚本语言，自带一些内置对象（Date、Math等等），通过DOM提供的接口进行相关操作
+
+window对象的alert()/prompt()/confirm()三个方法的使用
+
+document.getElementById()方法
+innerHTML属性获取HTML内容
+<div id="div3">
+  <p>here is the original text.</p>
+</div>
+var myDivContents = document.getElementById("div3").innerHTML; //myDivContents将会包含<p>here is the original text.</p>
+
+innerHTMl属性还可以设置选定的内容
+document.getElementById("div3").innerHTML = "<p>here is the new text instead</p>";
+
+window.history对象 访问过的URL列表
+window.location当前加载页面的URL信息
+window.navigator包含了浏览器程序本身的数据
+
+javascript对象Date()/Math()
