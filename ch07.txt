@@ -1,0 +1,33 @@
+ch07 面向对象编程
+本章内容：
+如何直接实例化对象、添加对象和方法；如何使用构造函数创建对象，从而便于实例化多个对象
+关键字prototype以及如何利用它扩展对象或以继承的方式新建对象
+
+直接创建对象
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  var myObject = new Object();
+  myObject.info = "this is the parameter";
+  function myFunc(){
+    alert(this.info);
+  }
+  myObject.showInfo = myFunc;
+</script>
+</head>
+<body>
+  <input type="button" value="" onclick = "myObject.showInfo()" />  //调用myObject对象的showInfo()方法
+  <input type="button" value="" onclick = "showInfo()" />  //报错 window对象下没有该方法
+  <input type="button" value="" onclick = "myFunc()" />   //调用该方法，但this指代的是window对象，所以为undefined
+</body>
+</html>
+
+//匿名函数
+myObject.showInfo = function(){
+  alert(this.info);
+}
+
+//使用构造函数创建对象
+
+//使用prototype扩展和继承对象
