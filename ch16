@@ -1,0 +1,18 @@
+章节内容：
+Ajax的基础知识
+一种不需要重新加载页面，就能从服务器获取信息的方法
+
+//创建XMLHttpRequest实例，跨浏览器的解决方案
+function getXMLHttpRequest(){
+  try{
+    try{
+      return new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    catch(e){
+      return new ActiveXObject("Msxml2.XMLHTTP");
+    }
+  }
+  catch(e){
+    return new XMLHttpRequest();
+  }
+}
